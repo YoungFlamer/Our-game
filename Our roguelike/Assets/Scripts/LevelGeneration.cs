@@ -74,8 +74,10 @@ public class LevelGeneration : MonoBehaviour
             }
 
         } while (used[starti, startj] != 0);
-
-        GameObject nextcube = Instantiate(intersectionRooms[Random.Range(0, intersectionRooms.Length-1)]) as GameObject;
+        
+        int roomIndex = Random.Range(0, intersectionRooms.Length);
+        GameObject roomToCreate = intersectionRooms[roomIndex];
+        GameObject nextcube = Instantiate(roomToCreate) as GameObject;
 
         nextcube.transform.position = new Vector3(starti * sizex, positiony, startj * sizez);
         amount++;
