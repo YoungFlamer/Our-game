@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Our roguelike/Assets/Scripts/LevelGeneration.cs.meta
+guid: 01f6fca035b7dea4ca323934c9690c3b
+timeCreated: 1570891118
+=======
+guid: cbc25eccccae9f54495a4c4e835f8429
+timeCreated: 1570471729
+>>>>>>> c9cd732c02e92b8dc7ce58d0e5370826b4a21a28:Our roguelike/Assets/Scripts/PlayerController.cs.meta
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
