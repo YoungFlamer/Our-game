@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour {//это базовый скрипт вра�
 	public void WakeUp(){
 		isSleeping = false;
 	}
-
+    public void WakeUp(){return;}
     public virtual void Move() { }
     public virtual void Attack(){}
     public virtual void Flee(){}
