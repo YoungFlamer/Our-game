@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour {//это базовый скрипт вра�
     public float reloadingTimer;
     public GameObject player;
     public Rigidbody rb;
+	public bool isSleeping;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -17,7 +18,7 @@ public class Enemy : MonoBehaviour {//это базовый скрипт вра�
         player = GameObject.FindWithTag("Player");
     }
 	void Update () {
-        if (player != null)
+		if (player != null && !isSleeping)
         {
             float distance = Vector3.Distance(transform.position, player.transform.position);
 
@@ -39,6 +40,9 @@ public class Enemy : MonoBehaviour {//это базовый скрипт вра�
                 reloadingTimer += Time.deltaTime;
             }
         }
+	}
+	public void WakeUp(){
+		isSleeping = false;
 	}
 
     public virtual void Move() { }
