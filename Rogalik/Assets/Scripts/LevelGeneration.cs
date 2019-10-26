@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class LevelGeneration : MonoBehaviour
 {
-    public GameObject startRoom;
-
-
-    //
+    public GameObject startRoom = null;
+    bool checkFirstly = false;
 
     float positiony;
 
     public GameObject[] intersectionRooms;
     public int n = 10; // size of massive. world size (in rooms)
     public int RoomsInLevel = 7;
-    // public int RoomsInLevel;
-    //take this one from Vanya's script Room
+    
+    
     public  float sizex  ;
     public float sizez ;
 
@@ -25,13 +23,13 @@ public class LevelGeneration : MonoBehaviour
     int[,] used;
     int ci, cj;//current i,curren j
 
-    void Start()
+    void Awake()
     {
-        //      RoomsInLevel = intersectionRooms.Length;
-        //GameObject cube = Instantiate(gameMas[1]) as GameObject;
+       
         positiony = transform.position.y;
-        sizex = 30;//intersectionRooms[0].transform.localScale.x;
-        sizez = 30;// intersectionRooms[0].transform.localScale.z;//?????????????????????????????????????
+        
+        sizex = RoomScript.GetRoomX();
+        sizez = RoomScript.GetRoomZ();
 
         used = new int[n, n];
         for (int i = 0; i < n; i++)
@@ -42,10 +40,7 @@ public class LevelGeneration : MonoBehaviour
             }
         }
 
-        // foreach(GameObject obj in gameMas)
-        //{
-        //   obj = cube;
-        // }
+       
         ci = n / 2;
         cj = n / 2;
         Camera.main.transform.position.Set(ci, positiony + 2, cj);
@@ -85,12 +80,23 @@ public class LevelGeneration : MonoBehaviour
         int roomIndex = Random.Range(0, intersectionRooms.Length);
         //print(roomIndex + " " + intersectionRooms.Length);
         GameObject roomToCreate = intersectionRooms[roomIndex];
-        GameObject nextcube = Instantiate(roomToCreate);//amount]) as GameObject;//
+        GameObject nextcube = Instantiate(roomToCreate);
 
         nextcube.transform.position = new Vector3(starti * sizex, positiony, startj * sizez);
+        if (!checkFirstly)
+        {
+            startRoom = nextcube;
+            checkFirstly = true;
+        }
         amount++;
         used[starti, startj] = 1;
         ci = starti;
         cj = startj;
+    }
+
+    public Vector3 GetSpawnPosition()
+    {
+        return startRoom.transform.position + new Vector3(RoomScript.GetRoomX() / 2f, 5, RoomScript.GetRoomZ() / 2f);
+
     }
 }

@@ -6,17 +6,27 @@ public class RoomScript : MonoBehaviour
 {
 
     public Vector3 offset;
-    public GameObject player;
-
-    void OnTriggerEnter(Collider other)
+    GameObject startpref;
+    private void Start()
     {
-        // todo: check the player
+        startpref = GameObject.Find("ThirdPersonController");
+         
+        WrightPosition character = startpref.GetComponent<WrightPosition>();
+        transform.position = character.GetCharacterPosition() + offset;
+    }
+    public static float GetRoomX()
+    {
+        return 30;
+    }
 
-        player = GameObject.FindWithTag("MainCharacter");
-        if (player == other.gameObject)
-        {
-            Camera.main.transform.position = transform.position + offset;
-        }
+    public static float GetRoomZ()
+    {
+        return 30;
+    }
+
+    private void Update()
+    {
+        transform.position = startpref.transform.position + offset;
     }
 
 }
