@@ -26,7 +26,9 @@ public class RoomScript : MonoBehaviour
 
     private void Update()
     {
-        transform.position = startpref.transform.position + offset;
+		if (startpref != null){
+            transform.position = startpref.transform.position + offset;
+		}
     }
 
 }

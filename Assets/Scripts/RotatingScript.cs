@@ -29,14 +29,15 @@ public class RotatingScript : MonoBehaviour
     }
     void Update()
     {
+		if (heroTrans != null){
         //setDx();
-        Ypos = transform.position.y;
-        heroX = heroTrans.position.x;
-        heroZ = heroTrans.position.z;
+            Ypos = transform.position.y;
+            heroX = heroTrans.position.x;
+            heroZ = heroTrans.position.z;
 
-        float currentXpos = transform.position.x + dx;
-        transform.position = new Vector3(currentXpos, Ypos, ZcordinatOfCircle(currentXpos));
-
+            float currentXpos = transform.position.x + dx;
+            transform.position = new Vector3(currentXpos, Ypos, ZcordinatOfCircle(currentXpos));
+		}
         
     }
 
