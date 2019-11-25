@@ -156,7 +156,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4ffeac331dc744397673c82506b389, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+--- !u!114 &539201473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539201464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb331f34c517a94bb8b6a4c67832910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HeroHp: 100
 --- !u!1 &1230867640
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,6 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1230867642}
   - component: {fileID: 1230867641}
+  - component: {fileID: 1230867643}
   m_Layer: 0
   m_Name: AbstractLevelGeneration
   m_TagString: Untagged
@@ -209,6 +222,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1230867643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230867640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59e4b5daf2c83ad4a8992c2b1cadcb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemies:
+  - {fileID: 8791712640326318049, guid: 5d625fae96e06bd47be34e17288c2798, type: 3}
+  - {fileID: 2864186489166328628, guid: 034d5850ed35776489e1f984ba2a857c, type: 3}
+  - {fileID: 3320381508776974401, guid: 792d611f8a085ac47b17e5247abf9e9f, type: 3}
+  - {fileID: 1492168702045523184, guid: 9438a43f08450814c9c18c4b23615f12, type: 3}
 --- !u!1 &1417957733
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,22 +525,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: END
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ccac3f45f8b36dc4196bc991b941ea8e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ccac3f45f8b36dc4196bc991b941ea8e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.6625142
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ccac3f45f8b36dc4196bc991b941ea8e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.74904937
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ccac3f45f8b36dc4196bc991b941ea8e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 82.984
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ccac3f45f8b36dc4196bc991b941ea8e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.3899994
@@ -566,6 +580,22 @@ PrefabInstance:
     - target: {fileID: 400002, guid: ccac3f45f8b36dc4196bc991b941ea8e, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.100000076
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ccac3f45f8b36dc4196bc991b941ea8e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ccac3f45f8b36dc4196bc991b941ea8e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6625142
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ccac3f45f8b36dc4196bc991b941ea8e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.74904937
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ccac3f45f8b36dc4196bc991b941ea8e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 82.984
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccac3f45f8b36dc4196bc991b941ea8e, type: 3}
@@ -660,6 +690,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d02e77f326278d45b3e5366855b4f6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 2784026670113372125, guid: 4aef8bf2eee0a114f8ab324b96e09a38,
+  FireBullet: {fileID: 1222564951992179142, guid: 05528826a4f46eb489834fe7a13d841c,
     type: 3}
-  reloadTime: 0
+  IceBullet: {fileID: 4848493298280895758, guid: eba5ee888e0e11d40b376027fa0263fc,
+    type: 3}
+  GroundBullet: {fileID: 6530813736451188670, guid: 60ca2d1dc240d4a4babaea2bd819e203,
+    type: 3}
+  WindBullet: {fileID: 9053799016756625397, guid: ad53dc6d3eede374abb23ad1ebcfe485,
+    type: 3}
+  reloadTime: 1

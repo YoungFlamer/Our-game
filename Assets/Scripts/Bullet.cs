@@ -5,8 +5,8 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 2;
-    public int damage;
     public float range = 20;
+    public DamageData damage;
     void Update()
     {
         float f = speed * Time.deltaTime;
@@ -17,13 +17,4 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
-/*    void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject.tag == "Enemy")
-        {
-            col.gameObject.GetComponent<Health>().TakeDamege(damage);
-        }
-        Destroy(gameObject);
-    }*/
-
 }

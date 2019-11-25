@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController :MonoBehaviour//,characterInterface
 {
-    public float speed;
-
+    // public float speed;
+    //public string TypeOfShoting;
+   
     // Update is called once per frame
     void Update()
     {
@@ -25,8 +26,12 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100f))
         {
-           // transform.LookAt(new Vector3(hit.point.x, transform.position.y, hit.point.z));
+            transform.LookAt(new Vector3(hit.point.x, transform.position.y, hit.point.z));
         }
     }
-    
+
+  //  public DamageData DealDamage()
+ //{
+
+//}    
 }

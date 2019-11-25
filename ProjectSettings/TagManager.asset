@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - MainCharacter
+  - FireEnemy
+  - GroundEnemy
+  - WindEnemy
+  - IceEnemy
+  - Bullet
+  - IceBullet
+  - WindBullet
+  - GroundBullet
   layers:
   - Default
   - TransparentFX
