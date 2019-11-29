@@ -67,6 +67,7 @@ GameObject:
   - component: {fileID: 487289212895540657}
   - component: {fileID: 487289212895540658}
   - component: {fileID: 487289212895540659}
+  - component: {fileID: 4711531379556796485}
   m_Layer: 0
   m_Name: Biome of  death
   m_TagString: Untagged
@@ -89,6 +90,8 @@ Transform:
   - {fileID: 487289213671160323}
   - {fileID: 487289212837316111}
   - {fileID: 487289214646902225}
+  - {fileID: 2443831246174023409}
+  - {fileID: 3821370420006371515}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -135,6 +138,27 @@ TerrainCollider:
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 9aaeb06d640e0e343b375fd1f8f22d62, type: 2}
   m_EnableTreeColliders: 1
+--- !u!114 &4711531379556796485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487289212895540660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59e4b5daf2c83ad4a8992c2b1cadcb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemies:
+  - {fileID: 1492168702045523184, guid: 9438a43f08450814c9c18c4b23615f12, type: 3}
+  - {fileID: 3320381508776974401, guid: 792d611f8a085ac47b17e5247abf9e9f, type: 3}
+  - {fileID: 2864186489166328628, guid: 034d5850ed35776489e1f984ba2a857c, type: 3}
+  - {fileID: 8791712640326318049, guid: 5d625fae96e06bd47be34e17288c2798, type: 3}
+  spawnPoints:
+  - {fileID: 2443831246174023409}
+  - {fileID: 3821370420006371515}
+  hero: {fileID: 0}
 --- !u!1 &487289213207037953
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +494,66 @@ Transform:
   m_Father: {fileID: 487289212895540657}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2882316056071774639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2443831246174023409}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2443831246174023409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2882316056071774639}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.88, y: 1.66, z: 16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487289212895540657}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8705739609896636852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3821370420006371515}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3821370420006371515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8705739609896636852}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.25, y: 1.66, z: 9.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487289212895540657}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &487289212544623797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -544,14 +628,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 27.5
@@ -596,6 +672,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
 --- !u!4 &487289212555208099 stripped
@@ -611,14 +695,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214174220519}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.98031
@@ -662,6 +738,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -867,14 +951,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (19)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 27.498001
@@ -919,6 +995,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
 --- !u!4 &487289212602376632 stripped
@@ -934,14 +1018,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.5
@@ -985,6 +1061,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -1198,14 +1282,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (18)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30.498001
@@ -1249,6 +1325,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -1462,14 +1546,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 39.5
@@ -1514,6 +1590,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
 --- !u!4 &487289212818823139 stripped
@@ -1529,14 +1613,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 42.5
@@ -1580,6 +1656,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -1730,14 +1814,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (15)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 39.498
@@ -1782,6 +1858,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
 --- !u!4 &487289212914693110 stripped
@@ -1797,14 +1881,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.5
@@ -1848,6 +1924,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -1994,14 +2078,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.98031
@@ -2045,6 +2121,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -2455,14 +2539,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.98031
@@ -2506,6 +2582,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -2585,14 +2669,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (20)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.498001
@@ -2637,6 +2713,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
 --- !u!4 &487289213185435098 stripped
@@ -2652,14 +2736,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (17)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 33.498
@@ -2703,6 +2779,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -2845,14 +2929,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (14)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 42.498
@@ -2896,6 +2972,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -2975,14 +3059,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.5
@@ -3026,6 +3102,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -3109,14 +3193,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (13)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.092
@@ -3160,6 +3236,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -3239,14 +3323,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289213505239198}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.98031
@@ -3291,6 +3367,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
 --- !u!4 &487289213362423255 stripped
@@ -3306,14 +3390,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (21)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.498001
@@ -3357,6 +3433,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -3503,14 +3587,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289213822983857}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.98031
@@ -3554,6 +3630,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -3767,14 +3851,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289213505239198}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.98031
@@ -3818,6 +3894,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -4169,14 +4253,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289213822983857}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.98031
@@ -4220,6 +4296,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -4382,14 +4466,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (16)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36.498
@@ -4433,6 +4509,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -4516,14 +4600,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214174220519}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.98031
@@ -4567,6 +4643,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -4910,14 +4994,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289213822983857}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.98031
@@ -4961,6 +5037,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -5182,14 +5266,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289213505239198}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.98031
@@ -5233,6 +5309,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -5328,14 +5412,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (23)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.09
@@ -5379,6 +5455,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -5537,14 +5621,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 33.5
@@ -5589,6 +5665,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
 --- !u!4 &487289213987152641 stripped
@@ -5604,14 +5688,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214174220519}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.98031
@@ -5656,6 +5732,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
 --- !u!4 &487289213996723520 stripped
@@ -5671,14 +5755,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30.5
@@ -5722,6 +5798,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -6467,14 +6551,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.98031
@@ -6519,6 +6595,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
 --- !u!4 &487289214127047793 stripped
@@ -6534,14 +6618,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36.5
@@ -6585,6 +6661,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -7393,14 +7477,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (22)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.498001
@@ -7445,6 +7521,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
 --- !u!4 &487289214363781939 stripped
@@ -7460,14 +7544,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289213505239198}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.98031
@@ -7512,6 +7588,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
 --- !u!4 &487289214378261558 stripped
@@ -7527,14 +7611,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214646902225}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.98031
@@ -7578,6 +7654,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -7787,14 +7871,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289214174220519}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.98031
@@ -7838,6 +7914,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
@@ -7929,14 +8013,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 487289213822983857}
     m_Modifications:
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_Name
-      value: StoneFence_Wall_LOD2
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.98031
@@ -7980,6 +8056,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_Name
+      value: StoneFence_Wall_LOD2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304d6e120f768dd418f558bd92acb781, type: 3}
