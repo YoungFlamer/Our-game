@@ -6,7 +6,7 @@ public class LevelGeneration : MonoBehaviour
 {
     public GameObject startRoom = null;
     bool checkFirstly = false;
-
+   
     float positiony;
 
     public GameObject[] intersectionRooms;
@@ -14,8 +14,8 @@ public class LevelGeneration : MonoBehaviour
     public int RoomsInLevel = 7;
     
     
-    public  float sizex  ;
-    public float sizez ;
+    private  float sizex  ;
+    private float sizez ;
 
     private int amount = 0;
 
@@ -40,7 +40,10 @@ public class LevelGeneration : MonoBehaviour
             }
         }
 
-       
+     /*   collisionchecker = Instantiate(checkerprefab);
+        BoxCollider checkercollider = collisionchecker.GetComponent<BoxCollider>();
+        // checkercollider.bounds.size.Set(30f, 10f, 30f);
+        checkercollider.size.Set(30f, 10f, 30f);*/
         ci = n / 2;
         cj = n / 2;
         Camera.main.transform.position.Set(ci, positiony + 2, cj);
@@ -83,6 +86,7 @@ public class LevelGeneration : MonoBehaviour
         GameObject nextcube = Instantiate(roomToCreate);
 
         nextcube.transform.position = new Vector3(starti * sizex, positiony, startj * sizez);
+        //collisionchecker.transform.position = new Vector3(starti * sizex, positiony, startj * sizez);
         if (!checkFirstly)
         {
             startRoom = nextcube;

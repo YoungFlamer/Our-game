@@ -206,8 +206,6 @@ MonoBehaviour:
   - {fileID: 6865318370193141032, guid: aa469f73c9e797e4c9229bcf8f11bd8b, type: 3}
   n: 10
   RoomsInLevel: 5
-  sizex: 0
-  sizez: 0
 --- !u!4 &1230867642
 Transform:
   m_ObjectHideFlags: 0
@@ -414,6 +412,10 @@ PrefabInstance:
     - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426510, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
