@@ -5,12 +5,19 @@ using UnityEngine;
 public class PlayerController :MonoBehaviour//,characterInterface
 {
     // public float speed;
-    //public string TypeOfShoting;
-   
+    //public sShoting;
+
+    public Transform currentRoomTransform => currentRoom?.transform;
+
+  
+
+    public RoomScript currentRoom;
     // Update is called once per frame
     void Update()
     {
        Rotate();
+        RoomCage();
+        
         //Move();
         
     }
@@ -34,4 +41,43 @@ public class PlayerController :MonoBehaviour//,characterInterface
  //{
 
 //}    
+
+    public void EnterRoom(RoomScript newRoom)
+    {
+        currentRoom = newRoom;
+    }
+
+    private void RoomCage()
+    {
+         if (currentRoom.IsRoomCleared())
+            return;
+        //print(currentRoom.transform.position.x + RoomScript.GetRoomX());
+        if (transform.position.x > currentRoom.transform.position.x + RoomScript.GetRoomX() / 2)
+        {
+            
+            Vector3 newPosition = transform.position;
+            newPosition.x -= 1;
+            transform.position = newPosition;
+        }
+        if (transform.position.x < currentRoom.transform.position.x - RoomScript.GetRoomZ() / 2)
+        {
+            Vector3 newPosition = transform.position;
+            newPosition.x += 1;
+            transform.position = newPosition;
+        }
+        if (transform.position.z > currentRoom.transform.position.z + RoomScript.GetRoomZ() / 2)
+        {
+            Vector3 newPosition = transform.position;
+            newPosition.z -= 1;
+            transform.position = newPosition;
+        }
+        if (transform.position.z < currentRoom.transform.position.z - RoomScript.GetRoomZ() / 2)
+        {
+            Vector3 newPosition = transform.position;
+            newPosition.z += 1;
+            transform.position = newPosition;
+        }
+
+    }
+    
 }

@@ -4,29 +4,28 @@ using UnityEngine;
 
 public class RoomScript : MonoBehaviour
 {
+    // Start is called before the first frame update
+  
+    // Update is called once per frame
+    public GameObject[] spawnPoints = new GameObject[4];
 
-    public Vector3 offset;
-    GameObject startpref;
-    private void Start()
-    {
-        startpref = GameObject.Find("ThirdPersonController");
-         
-        WrightPosition character = startpref.GetComponent<WrightPosition>();
-        transform.position = character.GetCharacterPosition() + offset;
-    }
-    public static float GetRoomX()
-    {
-        return 30;
-    }
+    private int EnemiesAlive = 0;
 
-    public static float GetRoomZ()
+    public void OnTriggerEnter(Collider incomingObject)
     {
-        return 30;
-    }
+        if(incomingObject.gameObject.tag == "MainCharacter")
+        {
+            
+            EnemyCreation.instance.CreateEnemies(spawnPoints, out EnemiesAlive);
 
-    private void Update()
-    {
-        transform.position = startpref.transform.position + offset;
+            var pc = incomingObject.gameObject.GetComponent<PlayerController>();
+            if(pc!=null)
+                pc.EnterRoom(this);
+        }
     }
+    public static float GetRoomX() => 30;
+    public static float GetRoomZ() => 30;
+    public GameObject[] getSpawnPoints() => spawnPoints;
 
+    public bool IsRoomCleared() => EnemiesAlive == 0; 
 }

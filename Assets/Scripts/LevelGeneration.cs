@@ -100,7 +100,7 @@ public class LevelGeneration : MonoBehaviour
 
     public Vector3 GetSpawnPosition()
     {
-        return startRoom.transform.position + new Vector3(RoomScript.GetRoomX() / 2f, 5, RoomScript.GetRoomZ() / 2f);
+        return startRoom.transform.position + new Vector3(RoomScript.GetRoomX() / 2f, 10, RoomScript.GetRoomZ() / 2f);
 
     }
 }

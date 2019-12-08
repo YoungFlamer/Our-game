@@ -17,6 +17,16 @@ PrefabInstance:
       propertyPath: damage
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 3816082283304654318, guid: d61ced7c7089a504fac2bdfa259192fc,
+        type: 3}
+      propertyPath: visionDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816082283304654318, guid: d61ced7c7089a504fac2bdfa259192fc,
+        type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 786268282977715238, guid: d61ced7c7089a504fac2bdfa259192fc,
         type: 3}
       propertyPath: m_LocalPosition.x

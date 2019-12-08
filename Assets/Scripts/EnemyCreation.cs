@@ -2,16 +2,48 @@
 
 public class EnemyCreation : MonoBehaviour
 {
-    public GameObject[] Enemies = new GameObject[4];
-    
+    public GameObject[] Enemies;
+	//private GameObject[] spawnPoints = new GameObject[4];
+	//public GameObject hero;
+	//public bool acted = false;
+    private PlayerController heroPL;
+
+    public static EnemyCreation instance;
+
     void Start()
     {
-        Random rand = new Random();
-        int a = Random.Range(0, 4);
-        GameObject Enemy = Instantiate(Enemies[a]);
-       
-        GameObject startpref = GameObject.Find("AbstractLevelGeneration");
-        LevelGeneration level = startpref.GetComponent<LevelGeneration>();
-        Enemy.transform.position = level.GetSpawnPosition() + new Vector3(-10, 10, -10);//level.intersectionRooms[1].transform.position + new Vector3(10,0,10);    
+        //	hero = GameObject.FindWithTag("MainCharacter");
+        //       heroPL = hero.GetComponent<PlayerController>();
+        //        spawnPoints = heroPL.currentRoomLocation.getSpawnPoints();
+        instance = this;
     }
+
+	public void CreateEnemies(GameObject[] spawnPoints, out int amountOfSpawned){
+		int n = spawnPoints.Length;
+        amountOfSpawned = 0;
+        for (int i = 0; i < n; i++){
+			int c = Random.Range(0, Enemies.Length - 1);
+			GameObject enemyToSpawn = Enemies[c];
+			Vector3 pos = spawnPoints[i].transform.position;
+			Instantiate(enemyToSpawn, pos, Quaternion.identity);
+            amountOfSpawned++;
+        }
+		//acted = true;
+	}
+
+/*	void Update(){
+        if(heroPL.changedTheRoom == true)
+        {
+            CreateEnemies();
+            heroPL.changedTheRoom = false;
+        }
+    }
+    
+	void CheckPlayerInRoom(){
+		float xDistance = hero.transform.position.x - transform.position.x;
+		float zDistance = hero.transform.position.z - transform.position.z;
+		if (Mathf.Abs(zDistance) < 15 || Mathf.Abs(xDistance) < 15){
+			CreateEnemies();
+		}
+	}*/
 }
