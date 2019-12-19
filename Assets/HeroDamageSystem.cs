@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HeroDamageSystem : MonoBehaviour
 {
@@ -20,10 +21,9 @@ public class HeroDamageSystem : MonoBehaviour
         HeroHp -= dd.Damage;
     }
 
-    [System.Obsolete]
     public void OnDeath()
     {
 
-        if (HeroHp <= 0) Application.LoadLevel(Application.loadedLevel);
+        if (HeroHp <= 0) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

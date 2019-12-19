@@ -18,15 +18,15 @@ public class EnemyCreation : MonoBehaviour
         instance = this;
     }
 
-	public void CreateEnemies(GameObject[] spawnPoints, out int amountOfSpawned){
+	public void CreateEnemies(GameObject[] spawnPoints){
 		int n = spawnPoints.Length;
-        amountOfSpawned = 0;
+      
         for (int i = 0; i < n; i++){
 			int c = Random.Range(0, Enemies.Length - 1);
 			GameObject enemyToSpawn = Enemies[c];
 			Vector3 pos = spawnPoints[i].transform.position;
 			Instantiate(enemyToSpawn, pos, Quaternion.identity);
-            amountOfSpawned++;
+           
         }
 		//acted = true;
 	}

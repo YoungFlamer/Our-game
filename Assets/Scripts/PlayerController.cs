@@ -52,32 +52,37 @@ public class PlayerController :MonoBehaviour//,characterInterface
          if (currentRoom.IsRoomCleared())
             return;
         //print(currentRoom.transform.position.x + RoomScript.GetRoomX());
-        if (transform.position.x > currentRoom.transform.position.x + RoomScript.GetRoomX() / 2)
+        if (transform.position.x > currentRoom.transform.position.x + RoomScript.GetRoomX() - 0.3f)
         {
             
             Vector3 newPosition = transform.position;
-            newPosition.x -= 1;
+            newPosition.x -= 0.1f;
             transform.position = newPosition;
         }
-        if (transform.position.x < currentRoom.transform.position.x - RoomScript.GetRoomZ() / 2)
+        if (transform.position.x < currentRoom.transform.position.x + 0.3f)
         {
             Vector3 newPosition = transform.position;
-            newPosition.x += 1;
+            newPosition.x += 0.1f;
             transform.position = newPosition;
         }
-        if (transform.position.z > currentRoom.transform.position.z + RoomScript.GetRoomZ() / 2)
+        if (transform.position.z > currentRoom.transform.position.z + RoomScript.GetRoomZ() - 0.3f)
         {
             Vector3 newPosition = transform.position;
-            newPosition.z -= 1;
+            newPosition.z -= 0.1f;
             transform.position = newPosition;
         }
-        if (transform.position.z < currentRoom.transform.position.z - RoomScript.GetRoomZ() / 2)
+        if (transform.position.z < currentRoom.transform.position.z + 0.3f)
         {
             Vector3 newPosition = transform.position;
-            newPosition.z += 1;
+            newPosition.z += 0.1f;
             transform.position = newPosition;
         }
 
+    }
+
+    public void EnemyIsDestroyed()
+    {
+        currentRoom.MinusEnemiesAlive();
     }
     
 }

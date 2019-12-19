@@ -11,7 +11,7 @@ public class Enemy :  MonoBehaviour
     
     public Element type;
 
-
+    private PlayerController h_playerController;
     public GameObject player;
     public Rigidbody m_rigidbody;
     public bool isSleeping;
@@ -22,8 +22,12 @@ public class Enemy :  MonoBehaviour
     {
         m_rigidbody = gameObject.GetComponent<Rigidbody>();
         m_damageSystem = GetComponent<DamageSystem>();
-        
+
         player = GameObject.FindWithTag("MainCharacter");
+       
+
+        h_playerController = player.GetComponent<PlayerController>();
+        m_damageSystem.DeathEnemy += h_playerController.EnemyIsDestroyed;
     }
 
 
@@ -43,6 +47,7 @@ public class Enemy :  MonoBehaviour
             Bullet bullet = collisionObject.GetComponent<Bullet>(); 
             m_damageSystem.TakeDamage(bullet.damage);
             Destroy(collisionObject);
+            
         }
     }
 }

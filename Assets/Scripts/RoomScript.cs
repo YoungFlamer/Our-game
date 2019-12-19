@@ -8,15 +8,16 @@ public class RoomScript : MonoBehaviour
   
     // Update is called once per frame
     public GameObject[] spawnPoints = new GameObject[4];
+    public static RoomScript room_instance;
+    private int EnemiesAlive = 4;
 
-    private int EnemiesAlive = 0;
 
     public void OnTriggerEnter(Collider incomingObject)
     {
         if(incomingObject.gameObject.tag == "MainCharacter")
         {
             
-            EnemyCreation.instance.CreateEnemies(spawnPoints, out EnemiesAlive);
+            EnemyCreation.instance.CreateEnemies(spawnPoints);
 
             var pc = incomingObject.gameObject.GetComponent<PlayerController>();
             if(pc!=null)
@@ -27,5 +28,10 @@ public class RoomScript : MonoBehaviour
     public static float GetRoomZ() => 30;
     public GameObject[] getSpawnPoints() => spawnPoints;
 
-    public bool IsRoomCleared() => EnemiesAlive == 0; 
+    public bool IsRoomCleared() => EnemiesAlive == 0;
+    public void MinusEnemiesAlive()
+    {
+        EnemiesAlive--;
+        print("EnemiesAlive: " + EnemiesAlive);
+    }
 }

@@ -234,10 +234,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemies:
-  - {fileID: 8791712640326318049, guid: 5d625fae96e06bd47be34e17288c2798, type: 3}
-  - {fileID: 2864186489166328628, guid: 034d5850ed35776489e1f984ba2a857c, type: 3}
-  - {fileID: 3320381508776974401, guid: 792d611f8a085ac47b17e5247abf9e9f, type: 3}
-  - {fileID: 1492168702045523184, guid: 9438a43f08450814c9c18c4b23615f12, type: 3}
+  - {fileID: 7819362468583468800, guid: a4aa9bb5a7e5b6249a11414a5e1840ed, type: 3}
+  - {fileID: 9077136361180387143, guid: c937adc421612ec459dfb146d5733ef3, type: 3}
+  - {fileID: 1969934020479378570, guid: 3119468a30100024ab3c832674db24f9, type: 3}
+  - {fileID: 6223191390185069305, guid: 7dd2e63fa6dc2c846985b0525c6d63c3, type: 3}
 --- !u!1 &1417957733
 GameObject:
   m_ObjectHideFlags: 0

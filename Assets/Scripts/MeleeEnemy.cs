@@ -8,7 +8,7 @@ public class MeleeEnemy : Enemy
     private float reloadTime = 3f;
     public float damage = 25f;
     private float reloadingTimer;
-    
+    public Animator animator;
     /* public void Update()
      {
          Move();
@@ -30,6 +30,7 @@ public class MeleeEnemy : Enemy
             if (distance <= visionDistance && distance >= attackDistance)
             {
                 Move();
+
             }
             if (distance <= attackDistance && reloadingTimer >= reloadTime)
             {
@@ -45,6 +46,7 @@ public class MeleeEnemy : Enemy
     }
     override public void Move()
     {
+        //animator.SetBool("Moving", true);
         transform.LookAt(player.transform.position);
         m_rigidbody.MovePosition(transform.position + transform.forward * speed * Time.deltaTime);
     }

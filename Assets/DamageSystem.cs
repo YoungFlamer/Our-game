@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using UnityEngine.SceneManagement;
 
 /*public struct DamageData
@@ -22,16 +23,16 @@ using UnityEngine.SceneManagement;
 public class DamageSystem : MonoBehaviour//,characterInterface
 {
 	public float MaxHp  = 100f;
+    public Action DeathEnemy;
     [HideInInspector]
     public float CurHp;
 	//public float Armor  = 0f;
 	
 	public bool IsHero{ get; private set; }
 
-	void Awake()
-	{
-		CurHp = MaxHp;
-
+	//void Awake()
+	//{
+	
 		// check if player is hero
 
 
@@ -39,10 +40,18 @@ public class DamageSystem : MonoBehaviour//,characterInterface
 		//IsHero = controller != null;
 
 //		IsRegenerating = false;
-	}
+	//}
 
-	void DeathOfEnemy()
-	{		
+    public void Start()
+    {
+        CurHp = MaxHp;
+        DeathEnemy += RoomScript.room_instance.MinusEnemiesAlive;
+
+    }
+
+    void DeathOfEnemy()
+	{
+        DeathEnemy();
 		Destroy(gameObject);
 
 	}
